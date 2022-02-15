@@ -1,5 +1,16 @@
 #include <iostream>
 using namespace std;
+class Point{
+    private:
+        float x, y;
+    public:
+        void setX(int _x){
+            this->x = _x;
+        }
+        void setY(int _y){
+            this->y = _y;
+        }
+}
 class Shape{
     public:
         virtual void description() const {std::cout<<"This is shape."<<std::endl;}
@@ -7,6 +18,7 @@ class Shape{
         virtual double getDoubleSurface() const {
             return getSurface() * 2;
         };
+        
 };
 class Rectangle:Shape{
     private:
